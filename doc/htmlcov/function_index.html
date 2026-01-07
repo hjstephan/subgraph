@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>Coverage report:
-            <span class="pc_cov">79%</span>
+            <span class="pc_cov">89%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -27,6 +27,8 @@
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>b</kbd>
+                        <kbd>p</kbd>
                         <kbd>c</kbd>
                         &nbsp; change column sorting
                     </p>
@@ -55,30 +57,65 @@
         </h2>
         <p class="text">
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-01-07 09:26 +0100
+            created at 2026-01-07 15:49 +0100
         </p>
     </div>
 </header>
 <main id="index">
     <table class="index" data-sortable>
         <thead>
+            <tr class="tablehead grouphead">
+                <th class="spacer">&nbsp;</th>
+                <th class="spacer">&nbsp;</th>
+                <th class="spacer">&nbsp;</th>
+                <th class="left" colspan="4">Statements</th>
+                <th class="spacer">&nbsp;</th>
+                <th class="left" colspan="3">Branches</th>
+                <th class="spacer">&nbsp;</th>
+                <th>Total</th>
+            </tr>
             <tr class="tablehead" title="Click to sort">
                 <th id="file" class="name" aria-sort="none" data-shortcut="f">File<span class="arrows"></span></th>
                 <th id="region" class="name" aria-sort="none" data-default-sort-order="ascending" data-shortcut="n">function<span class="arrows"></span></th>
                 <th class="spacer">&nbsp;</th>
+                <th id="statements_coverage" aria-sort="none" data-default-sort-order="descending">coverage<span class="arrows"></span></th>
                 <th id="statements" aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
                 <th id="missing" aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
                 <th id="excluded" aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
+                <th class="spacer">&nbsp;</th>
+                <th id="branches_coverage" aria-sort="none" data-default-sort-order="descending">coverage<span class="arrows"></span></th>
+                <th id="branches" aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches<span class="arrows"></span></th>
+                <th id="partial" aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial<span class="arrows"></span></th>
                 <th class="spacer">&nbsp;</th>
                 <th id="coverage" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
             </tr>
         </thead>
         <tbody>
             <tr class="region">
+                <td class="name"><a href="setup_py.html">setup.py</a></td>
+                <td class="name"><a href="setup_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 4">0%</td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 4">0%</td>
+            </tr>
+            <tr class="region">
                 <td class="name"><a href="z_145eef247bfb46b6___init___py.html">src&#8201;/&#8201;__init__.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6___init___py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
@@ -88,7 +125,12 @@
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t18">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t18"><data value='init__'>Subgraph.__init__</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
                 <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
@@ -98,77 +140,117 @@
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t28">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t28"><data value='compute_column_signature'>Subgraph._compute_column_signature</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="9 9">100%</td>
+                <td data-ratio="2 2">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 11">100%</td>
             </tr>
             <tr class="region">
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t68">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t68"><data value='find_signature_rotation_match'>Subgraph._find_signature_rotation_match</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 20">90%</td>
                 <td>20</td>
                 <td>2</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="18 20">90%</td>
+                <td data-ratio="10 14">71%</td>
+                <td>14</td>
+                <td>4</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="28 34">82%</td>
             </tr>
             <tr class="region">
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t132">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t132"><data value='compare_signature_sequences'>Subgraph._compare_signature_sequences</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 10">100%</td>
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="10 10">100%</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="16 16">100%</td>
             </tr>
             <tr class="region">
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t154">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t154"><data value='compare_graphs'>Subgraph.compare_graphs</data></a></td>
                 <td class="spacer">&nbsp;</td>
-                <td>11</td>
+                <td data-ratio="13 15">87%</td>
+                <td>15</td>
                 <td>2</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="9 11">82%</td>
+                <td data-ratio="6 8">75%</td>
+                <td>8</td>
+                <td>2</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="19 23">83%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t201">src&#8201;/&#8201;subgraph.py</a></td>
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t201"><data value='adjacency_matrix_to_list'>Subgraph.adjacency_matrix_to_list</data></a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t208">src&#8201;/&#8201;subgraph.py</a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t208"><data value='adjacency_matrix_to_list'>Subgraph.adjacency_matrix_to_list</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
                 <td>7</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="7 7">100%</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="13 13">100%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t221">src&#8201;/&#8201;subgraph.py</a></td>
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t221"><data value='compare_graphs_with_adj_list'>Subgraph.compare_graphs_with_adj_list</data></a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t228">src&#8201;/&#8201;subgraph.py</a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t228"><data value='compare_graphs_with_adj_list'>Subgraph.compare_graphs_with_adj_list</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 11">91%</td>
                 <td>11</td>
                 <td>1</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="10 11">91%</td>
+                <td data-ratio="5 6">83%</td>
+                <td>6</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="15 17">88%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t248">src&#8201;/&#8201;subgraph.py</a></td>
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t248"><data value='analyze_complexity'>Subgraph.analyze_complexity</data></a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t255">src&#8201;/&#8201;subgraph.py</a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t255"><data value='analyze_complexity'>Subgraph.analyze_complexity</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
                 <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
                 <td data-ratio="1 1">100%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t271">src&#8201;/&#8201;subgraph.py</a></td>
-                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t271"><data value='create_example_graphs'>create_example_graphs</data></a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t278">src&#8201;/&#8201;subgraph.py</a></td>
+                <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html#t278"><data value='create_example_graphs'>create_example_graphs</data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
                 <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
@@ -178,11 +260,661 @@
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html">src&#8201;/&#8201;subgraph.py</a></td>
                 <td class="name"><a href="z_145eef247bfb46b6_subgraph_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
                 <td class="spacer">&nbsp;</td>
+                <td data-ratio="13 29">45%</td>
                 <td>29</td>
                 <td>16</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="13 29">45%</td>
+                <td data-ratio="1 6">17%</td>
+                <td>6</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="14 35">40%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531___init___py.html">tests&#8201;/&#8201;__init__.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531___init___py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t13">tests&#8201;/&#8201;test_integration.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t13"><data value='test_full_workflow_matrix_method'>TestIntegration.test_full_workflow_matrix_method</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 10">100%</td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 12">92%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t32">tests&#8201;/&#8201;test_integration.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t32"><data value='test_full_workflow_adjacency_list_method'>TestIntegration.test_full_workflow_adjacency_list_method</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="8 8">100%</td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t48">tests&#8201;/&#8201;test_integration.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html#t48"><data value='test_both_methods_give_same_result'>TestIntegration.test_both_methods_give_same_result</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html">tests&#8201;/&#8201;test_integration.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_integration_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html#t13">tests&#8201;/&#8201;test_performace.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html#t13"><data value='test_non_square_matrix'>TestEdgeCases.test_non_square_matrix</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="8 10">80%</td>
+                <td>10</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="8 10">80%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html#t31">tests&#8201;/&#8201;test_performace.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html#t31"><data value='test_matrix_with_values_greater_than_one'>TestEdgeCases.test_matrix_with_values_greater_than_one</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html">tests&#8201;/&#8201;test_performace.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_performace_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t14">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t14"><data value='algo'>TestSubgraph.algo</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t19">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t19"><data value='algo_adj_list'>TestSubgraph.algo_adj_list</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t23">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t23"><data value='test_initialization'>TestSubgraph.test_initialization</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t28">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t28"><data value='test_compute_column_signature_empty'>TestSubgraph.test_compute_column_signature_empty</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t36">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t36"><data value='test_compute_column_signature_simple'>TestSubgraph.test_compute_column_signature_simple</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t47">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t47"><data value='test_compute_column_signature_complex'>TestSubgraph.test_compute_column_signature_complex</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t60">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t60"><data value='test_compute_column_signature_uniqueness'>TestSubgraph.test_compute_column_signature_uniqueness</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t81">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t81"><data value='test_compute_column_signature_collision_resistance'>TestSubgraph.test_compute_column_signature_collision_resistance</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t103">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t103"><data value='test_compute_column_signature_same_pattern_different_columns'>TestSubgraph.test_compute_column_signature_same_pattern_different_columns</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t118">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t118"><data value='test_matrix_contains_matrix_identical'>TestSubgraph.test_matrix_contains_matrix_identical</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t127">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t127"><data value='test_matrix_contains_matrix_subset'>TestSubgraph.test_matrix_contains_matrix_subset</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t140">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t140"><data value='test_matrix_contains_matrix_disjoint'>TestSubgraph.test_matrix_contains_matrix_disjoint</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t155">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t155"><data value='test_matrix_contains_matrix_different_sizes'>TestSubgraph.test_matrix_contains_matrix_different_sizes</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t164">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t164"><data value='test_rotation_matching'>TestSubgraph.test_rotation_matching</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t191">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t191"><data value='test_compare_signature_sequences'>TestSubgraph.test_compare_signature_sequences</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="13 13">100%</td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t215">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t215"><data value='test_signatures_contain_basic'>TestSubgraph.test_signatures_contain_basic</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t227">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t227"><data value='test_signatures_contain_early_exit'>TestSubgraph.test_signatures_contain_early_exit</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t239">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t239"><data value='test_compare_graphs_b_contains_a'>TestSubgraph.test_compare_graphs_b_contains_a</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 8">88%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t257">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t257"><data value='test_compare_graphs_a_contains_b'>TestSubgraph.test_compare_graphs_a_contains_b</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 8">88%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t275">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t275"><data value='test_compare_graphs_equal'>TestSubgraph.test_compare_graphs_equal</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t291">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t291"><data value='test_compare_graphs_keep_both'>TestSubgraph.test_compare_graphs_keep_both</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 7">86%</td>
+                <td>7</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 9">78%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t313">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t313"><data value='test_adjacency_matrix_to_list_empty'>TestSubgraph.test_adjacency_matrix_to_list_empty</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t319">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t319"><data value='test_adjacency_matrix_to_list_simple'>TestSubgraph.test_adjacency_matrix_to_list_simple</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t329">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t329"><data value='test_adjacency_matrix_to_list_complete'>TestSubgraph.test_adjacency_matrix_to_list_complete</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t339">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t339"><data value='test_compare_graphs_with_adj_list_b_contains_a'>TestSubgraph.test_compare_graphs_with_adj_list_b_contains_a</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t355">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t355"><data value='test_compare_graphs_with_adj_list_equal'>TestSubgraph.test_compare_graphs_with_adj_list_equal</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t362">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t362"><data value='test_compare_graphs_with_adj_list_keep_both'>TestSubgraph.test_compare_graphs_with_adj_list_keep_both</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t370">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t370"><data value='test_analyze_complexity'>TestSubgraph.test_analyze_complexity</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t379">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t379"><data value='test_create_example_graphs'>TestSubgraph.test_create_example_graphs</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t387">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t387"><data value='test_large_graph'>TestSubgraph.test_large_graph</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t399">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t399"><data value='test_dense_graph_performance'>TestSubgraph.test_dense_graph_performance</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t410">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t410"><data value='test_empty_graphs'>TestSubgraph.test_empty_graphs</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t418">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t418"><data value='test_single_node'>TestSubgraph.test_single_node</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t428">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html#t428"><data value='test_path_graph'>TestSubgraph.test_path_graph</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 8">88%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html">tests&#8201;/&#8201;test_subgraph.py</a></td>
+                <td class="name"><a href="z_a44f0ac069e85531_test_subgraph_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="41 42">98%</td>
+                <td>42</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 2">50%</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="42 44">95%</td>
             </tr>
         </tbody>
         <tfoot>
@@ -190,11 +922,16 @@
                 <td class="name">Total</td>
                 <td class="name">&nbsp;</td>
                 <td class="spacer">&nbsp;</td>
-                <td>102</td>
-                <td>21</td>
+                <td data-ratio="338 367">92%</td>
+                <td>367</td>
+                <td>29</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="81 102">79%</td>
+                <td data-ratio="42 60">70%</td>
+                <td>60</td>
+                <td>14</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="380 427">89%</td>
             </tr>
         </tfoot>
     </table>
@@ -206,7 +943,7 @@
     <div class="content">
         <p>
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-01-07 09:26 +0100
+            created at 2026-01-07 15:49 +0100
         </p>
     </div>
     <aside class="hidden">

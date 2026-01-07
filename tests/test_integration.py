@@ -24,8 +24,8 @@ class TestIntegration:
         
         assert len(sig_A) == A.shape[1]
         assert len(sig_B) == B.shape[1]
-        # Mit LCS könnte das Ergebnis variieren
-        assert decision in ["keep_B", "equal", "keep_both"]
+
+        assert decision in ["equal_keep_B"]
         if decision != "keep_both":
             assert kept is not None
     
@@ -56,5 +56,5 @@ class TestIntegration:
         # Die Methoden verwenden unterschiedliche Algorithmen
         # LCS vs. direkte Subset-Prüfung
         # Daher können die Ergebnisse unterschiedlich sein
-        assert decision1 in ["keep_B", "equal", "keep_both", "keep_A"]
-        assert decision2 in ["keep_B", "equal", "keep_both", "keep_A"]
+        assert decision1 in ["equal_keep_B"]
+        assert decision2 in ["keep_B"]

@@ -190,7 +190,14 @@ class Subgraph:
         
         # Schritt 3: Entscheidung
         if A_in_B and B_in_A:
-            return ("equal", A)
+            # Zähle die Anzahl der Einsen (Kanten)
+            ones_A = np.sum(A == 1)
+            ones_B = np.sum(B == 1)
+            
+            if ones_B > ones_A:
+                return ("equal_keep_B", B)
+            else:
+                return ("equal_keep_A", A)
         elif A_in_B:
             return ("keep_B", B)
         elif B_in_A:

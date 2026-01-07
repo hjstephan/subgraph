@@ -250,7 +250,7 @@ class TestSubgraph:
         ])
         decision, kept = algo.compare_graphs(A, B)
         # Mit LCS-Algorithmus könnte das Ergebnis anders sein
-        assert decision in ["keep_B", "equal", "keep_both"]
+        assert decision in ["equal_keep_B"]
         if decision != "keep_both":
             assert kept is not None
     
@@ -268,7 +268,7 @@ class TestSubgraph:
         ])
         decision, kept = algo.compare_graphs(A, B)
         # Mit LCS-Algorithmus könnte das Ergebnis anders sein
-        assert decision in ["keep_A", "equal", "keep_both"]
+        assert decision in ["equal_keep_A"]
         if decision != "keep_both":
             assert kept is not None
     
@@ -285,7 +285,7 @@ class TestSubgraph:
             [0, 0, 0]
         ])
         decision, kept = algo.compare_graphs(A, B)
-        assert decision == "equal"
+        assert decision == "equal_keep_A"
         assert np.array_equal(kept, A)
     
     def test_compare_graphs_keep_both(self, algo):
@@ -303,9 +303,9 @@ class TestSubgraph:
         decision, kept = algo.compare_graphs(A, B)
         # Mit Rotation könnte A=B gefunden werden, da beide nur eine Kante haben
         # Erwarte "equal" oder "keep_both" je nach Implementierung
-        assert decision in ["keep_both", "equal"]
+        assert decision in ["equal_keep_A"]
         # Wenn equal, dann ist kept nicht None
-        if decision == "equal":
+        if decision == "equal_keep_A":
             assert kept is not None
         else:
             assert kept is None
@@ -394,7 +394,7 @@ class TestSubgraph:
         B[10, 15] = 1
         
         decision, kept = algo.compare_graphs(A, B)
-        assert decision in ["keep_B", "equal"]
+        assert decision in ["equal_keep_B"]
     
     def test_dense_graph_performance(self, algo):
         """Test: Dichter Graph (viele Kanten)"""
@@ -405,7 +405,7 @@ class TestSubgraph:
         B = A.copy()
         
         decision, kept = algo.compare_graphs(A, B)
-        assert decision == "equal"
+        assert decision == "equal_keep_A"
     
     def test_empty_graphs(self, algo):
         """Test: Leere Graphen (keine Kanten)"""
@@ -413,7 +413,7 @@ class TestSubgraph:
         B = np.zeros((5, 5), dtype=int)
         
         decision, kept = algo.compare_graphs(A, B)
-        assert decision == "equal"
+        assert decision == "equal_keep_A"
     
     def test_single_node(self, algo):
         """Test: Graph mit einem Knoten"""
@@ -444,7 +444,7 @@ class TestSubgraph:
         
         decision, kept = algo.compare_graphs(A, B)
         # Mit LCS: könnte "equal" finden wenn >= 2 Matches
-        assert decision in ["keep_B", "equal", "keep_both"]
+        assert decision in ["equal_keep_B"]
         if decision != "keep_both":
             assert kept is not None
 
