@@ -8,7 +8,7 @@ setup(
     version="1.0.0",
     author="Stephan Epp",
     author_email="hjstephan@gmail.com",
-    description="Effizienter Algorithmus für Subgraph-Vergleiche",
+    description="Effizienter Algorithmus für Subgraph-Beziehungen",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/hjstephan/subgraph",

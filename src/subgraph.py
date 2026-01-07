@@ -132,25 +132,24 @@ class Subgraph:
     def _compare_signature_sequences(self, seq_A: List[int], seq_B: List[int]) -> bool:
         """
         Vergleicht zwei Signatur-Sequenzen elementweise.
-        
-        Prüft ob alle Kanten von A in B vorhanden sind durch Bit-Vergleich.
-        
         Args:
-            seq_A: Sequenz von Zeilenkomponenten aus Signaturen von A
-            seq_B: Sequenz von Zeilenkomponenten aus Signaturen von B
-            
-        Returns:
-            True, wenn für jede Position i gilt: (seq_A[i] & seq_B[i]) == seq_A[i]
+            seq_A: Signatur-Sequenz von G
+            seq_B: Signatur-Sequenz von G'
         """
-        if len(seq_A) != len(seq_B):
-            return False
+        n, m = len(seq_A), len(seq_B)
+    
+        dp = [[0] * (m + 1) for _ in range(n + 1)]
+        max_length = 0
+
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                if seq_A[i-1] == seq_B[j-1]:
+                    dp[i][j] = dp[i-1][j-1] + 1
+                    max_length = max(max_length, dp[i][j])
+                else:
+                    dp[i][j] = 0
         
-        for sig_a, sig_b in zip(seq_A, seq_B):
-            # Bit-Check: Alle Bits von A müssen in B gesetzt sein
-            if (sig_a & sig_b) != sig_a:
-                return False
-        
-        return True
+        return max_length >= 2
     
     def compare_graphs(self, A: np.ndarray, B: np.ndarray) -> Tuple[str, np.ndarray]:
         """
