@@ -81,6 +81,8 @@ Für beide Richtungen ($A \subseteq B$ und $B \subseteq A$): **$O(n^3)$**
 
 Die Rotation der Spalten entspricht dem Drehen des Graphen. Dabei bleibt die Struktur des Graphen, gegeben durch die Verbundenheit der Knoten und Kanten, immer erhalten. Deshalb sind nur $n$ Rotation zu betrachten und nicht $n!$ viele Permutationen. Der Graph wird so lange gedreht, bis eine Subgraph-Beziehung existiert oder das Drehen vollständig durchgeführt wurde, ohne dass eine Subgraph-Beziehung existiert. Zur Überprüfung der Subgraph-Beziehung werden die Elemente der Signatur-Arrays in $O(n^2)$ Laufzeit verglichen. 
 
+Der Subgraph Algorithmus eignet sich für die Verifikation von unterschiedlichen Programmen durch die Analyse der Abstract Syntax Trees.  
+
 ## Implementierung
 
 Der Algorithmus und die Tests wurden mit Claude AI generiert. Eine korrekte Implementierung kann damit nicht garantiert werden.
