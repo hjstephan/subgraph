@@ -1,0 +1,58 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/stephan/Git/subgraph/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/stephan/Git/subgraph
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.0.0
+collecting ... collected 37 items
+
+tests/test_integration.py::TestIntegration::test_full_workflow_matrix_method PASSED [  2%]
+tests/test_integration.py::TestIntegration::test_full_workflow_adjacency_list_method PASSED [  5%]
+tests/test_integration.py::TestIntegration::test_both_methods_give_same_result PASSED [  8%]
+tests/test_performace.py::TestEdgeCases::test_non_square_matrix PASSED   [ 10%]
+tests/test_performace.py::TestEdgeCases::test_matrix_with_values_greater_than_one PASSED [ 13%]
+tests/test_subgraph.py::TestSubgraph::test_initialization PASSED         [ 16%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_empty PASSED [ 18%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_simple PASSED [ 21%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_complex PASSED [ 24%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_uniqueness PASSED [ 27%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_collision_resistance PASSED [ 29%]
+tests/test_subgraph.py::TestSubgraph::test_compute_column_signature_same_pattern_different_columns PASSED [ 32%]
+tests/test_subgraph.py::TestSubgraph::test_matrix_contains_matrix_identical PASSED [ 35%]
+tests/test_subgraph.py::TestSubgraph::test_matrix_contains_matrix_subset PASSED [ 37%]
+tests/test_subgraph.py::TestSubgraph::test_matrix_contains_matrix_disjoint PASSED [ 40%]
+tests/test_subgraph.py::TestSubgraph::test_matrix_contains_matrix_different_sizes PASSED [ 43%]
+tests/test_subgraph.py::TestSubgraph::test_rotation_matching PASSED      [ 45%]
+tests/test_subgraph.py::TestSubgraph::test_compare_signature_sequences PASSED [ 48%]
+tests/test_subgraph.py::TestSubgraph::test_signatures_contain_basic PASSED [ 51%]
+tests/test_subgraph.py::TestSubgraph::test_signatures_contain_early_exit PASSED [ 54%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_b_contains_a PASSED [ 56%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_a_contains_b PASSED [ 59%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_equal PASSED   [ 62%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_keep_both PASSED [ 64%]
+tests/test_subgraph.py::TestSubgraph::test_adjacency_matrix_to_list_empty PASSED [ 67%]
+tests/test_subgraph.py::TestSubgraph::test_adjacency_matrix_to_list_simple PASSED [ 70%]
+tests/test_subgraph.py::TestSubgraph::test_adjacency_matrix_to_list_complete PASSED [ 72%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_with_adj_list_b_contains_a PASSED [ 75%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_with_adj_list_equal PASSED [ 78%]
+tests/test_subgraph.py::TestSubgraph::test_compare_graphs_with_adj_list_keep_both PASSED [ 81%]
+tests/test_subgraph.py::TestSubgraph::test_analyze_complexity PASSED     [ 83%]
+tests/test_subgraph.py::TestSubgraph::test_create_example_graphs PASSED  [ 86%]
+tests/test_subgraph.py::TestSubgraph::test_large_graph PASSED            [ 89%]
+tests/test_subgraph.py::TestSubgraph::test_dense_graph_performance PASSED [ 91%]
+tests/test_subgraph.py::TestSubgraph::test_empty_graphs PASSED           [ 94%]
+tests/test_subgraph.py::TestSubgraph::test_single_node PASSED            [ 97%]
+tests/test_subgraph.py::TestSubgraph::test_path_graph PASSED             [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+src/__init__.py       0      0   100%
+src/subgraph.py      98     21    79%   100, 103, 146, 200, 245, 300-320
+-----------------------------------------------
+TOTAL                98     21    79%
+Coverage HTML written to dir doc/htmlcov
+============================== 37 passed in 0.26s ==============================
