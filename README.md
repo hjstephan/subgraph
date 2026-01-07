@@ -2,7 +2,7 @@
 
 Ein effizienter Algorithmus zum Vergleichen zweier Graphen $G$ und $G'$ mittels Adjazenzmatrizen und Signatur-Arrays. Der Algorithmus bestimmt durch zyklische Rotation, ob ein Graph als Subgraph in einem anderen enthalten ist.
 
-## 🎯 Problemstellung
+## Problemstellung
 
 Gegeben sind zwei Graphen $G$ und $G'$ mit jeweils $n$ Knoten, repräsentiert durch Adjazenzmatrizen $A$ und $B$. 
 
@@ -14,7 +14,7 @@ Gegeben sind zwei Graphen $G$ und $G'$ mit jeweils $n$ Knoten, repräsentiert du
 - Wenn beide identisch sind: Beliebige behalten
 - Wenn keiner den anderen enthält: Beide behalten
 
-## 🔑 Kernidee
+## Idee
 
 Der Algorithmus basiert auf zwei zentralen Konzepten:
 
@@ -49,7 +49,7 @@ Rotation 3: [sig_3, sig_0, sig_1, sig_2]
 
 Dies erhält die sequentielle Ordnung und reduziert die Komplexität drastisch.
 
-## ⏱️ Laufzeitkomplexität: $O(n^3)$
+## Laufzeitanalyse: $O(n^3)$
 
 ### Detaillierte Analyse
 
@@ -81,7 +81,11 @@ Für beide Richtungen ($A \subseteq B$ und $B \subseteq A$): **$O(n^3)$**
 
 Die Rotation der Spalten entspricht dem Drehen des Graphen. Dabei bleibt die Struktur des Graphen, gegeben durch die Verbundenheit der Knoten und Kanten, immer erhalten. Deshalb sind nur $n$ Rotation zu betrachten und nicht $n!$ viele Permutationen. Der Graph wird so lange gedreht, bis eine Subgraph-Beziehung existiert oder das Drehen vollständig durchgeführt wurde, ohne dass eine Subgraph-Beziehung existiert. Zur Überprüfung der Subgraph-Beziehung werden die Elemente der Signatur-Arrays in $O(n^2)$ Laufzeit verglichen. 
 
-## 📦 Installation
+## Implementierung
+
+Der Algorithmus und die Tests wurden mit Claude AI generiert. Eine korrekte Implementierung kann damit nicht garantiert werden.
+
+## Installation
 
 ```bash
 # Repository klonen
@@ -99,7 +103,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## 💻 Verwendung
+## Verwendung
 
 ### Grundlegendes Beispiel
 
@@ -158,7 +162,7 @@ print(f"G in G' enthalten: {is_contained}")
 # Output: True
 ```
 
-## 🧪 Tests
+## Tests
 
 Das Projekt verwendet pytest mit umfassender Test-Suite und Code-Coverage.
 
@@ -193,7 +197,7 @@ tests/
 └── test_performace.py        # Performance-Tests
 ```
 
-## 🔧 Erweiterte Verwendung
+## Erweiterte Verwendung
 
 ### Mit Adjazenzlisten
 
