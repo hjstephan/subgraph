@@ -34,7 +34,7 @@ Spalte 1: [1, 0, 1, 0] → 2^0 + 2^2 + 1*(2^4) = 1 + 4 + 16 = 21
 
 **Warum eindeutig?**
 - Die Zeilenkomponente $\sum 2^i$ kodiert jede Binärkombination eindeutig
-- Die Spaltengewichtung $\text{col} \cdot 2^n$ unterscheidet gleiche Muster an verschiedenen Positionen
+- Die Spaltengewichtung $j \cdot 2^n$ unterscheidet gleiche Muster an verschiedenen Positionen
 
 ### 2. Zyklische Rotation
 
@@ -49,9 +49,7 @@ Rotation 3: [sig_3, sig_0, sig_1, sig_2]
 
 Dies erhält die sequentielle Ordnung und reduziert die Komplexität drastisch.
 
-## Laufzeitanalyse: $O(n^3)$
-
-### Detaillierte Analyse
+## Laufzeit
 
 Der Algorithmus arbeitet in drei Schritten:
 
@@ -75,13 +73,15 @@ Der Algorithmus arbeitet in drei Schritten:
 - Komplexität: O(n * (n² + n²)) = O(n³)
 ```
 
-Für beide Richtungen ($A \subseteq B$ und $B \subseteq A$): **$O(n^3)$**
+Damit arbeitet der Subgraph Algorithmus mit einer Laufzeit von $O(n^3)$. Zur Prüfung beider Richtungen $A \subseteq B$ und $B \subseteq A$ benötigt der Subgraph Algorithmus auch eine Laufzeit von $O(n^3)$. 
 
-**Wichtig**: Der Algorithmus verwendet **nur $n$ Rotationen**, nicht $n!$ Permutationen!
+## Korrektheit
 
-Die Rotation der Spalten entspricht dem Drehen des Graphen. Dabei bleibt die Struktur des Graphen, gegeben durch die Verbundenheit der Knoten und Kanten, immer erhalten. Deshalb sind nur $n$ Rotation zu betrachten und nicht $n!$ viele Permutationen. Der Graph wird so lange gedreht, bis eine Subgraph-Beziehung existiert oder das Drehen vollständig durchgeführt wurde, ohne dass eine Subgraph-Beziehung existiert. Zur Überprüfung der Subgraph-Beziehung werden die Elemente der Signatur-Arrays in $O(n^2)$ Laufzeit verglichen. 
+**Wichtig**: Der Algorithmus verwendet **nur $n$ Rotationen**, nicht $n!$ Permutationen.
 
-Der Subgraph Algorithmus eignet sich für die Verifikation von unterschiedlichen Programmen durch die Analyse der Abstract Syntax Trees.  
+Die Rotation der Spalten entspricht dem Drehen des Graphen. Dabei bleibt die Struktur des Graphen, gegeben durch die Verbundenheit der Knoten und Kanten, immer erhalten. Deshalb sind nur $n$ Rotation zu betrachten und nicht $n!$ viele Permutationen. Der Graph wird so lange gedreht, bis eine Subgraph-Beziehung existiert oder das Drehen vollständig durchgeführt wurde, ohne dass eine Subgraph-Beziehung existiert. Zur Überprüfung der Subgraph-Beziehung für eine jede Drehung werden die Elemente der Signatur-Arrays in $O(n^2)$ Laufzeit verglichen. Dabei wird die längste gemeinsame Teilsequenz beider Signatur-Arrays ermittelt. Ist die längste gemeinsame Teilsequenz beider Signatur-Arrays für alle Drehungen kleiner als zwei, existiert keine Subgraph-Beziehung. Denn es kann nur dann eine Subgraph-Beziehung existieren, wenn mindestens zwei Knoten durch eine Kante miteinander verbunden sind. Dass die Berechnung der Signaturen für eine jede Spalte von $A$ bzw. $B$ eindeutig ist, geht daraus hervor, dass die Funktion zur Berechnung der Signatur immer injektiv ist. Sie kann die Injektivität nicht verletzen, denn durch $j \cdot 2^n$ wird für die $j$-te Spalte immer ein Summand am Ende der Signatur ergänzt, der gerade groß genug ist, um die $j$-te Spalte eindeutig zu identifizieren.
+
+**Anwendung**: Der Subgraph Algorithmus eignet sich für die Verifikation von unterschiedlichen Programmen durch die Analyse der Abstract Syntax Trees.  
 
 ## Implementierung
 
