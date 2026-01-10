@@ -178,7 +178,7 @@ class Subgraph:
             - ("keep_B", B) wenn B die Matrix A enthält (G' hat mehr Info)
             - ("keep_A", A) wenn A die Matrix B enthält (G hat mehr Info)
             - ("keep_both", None) wenn keiner den anderen enthält
-            - ("equal", A) wenn beide identisch sind
+            - ("equal_keep_B", B) oder ("equal_keep_A", A) wenn beide identisch sind
         """
         # Schritt 1: Berechne Signatur-Arrays O(n²)
         sig_A = self._compute_column_signature(A)
