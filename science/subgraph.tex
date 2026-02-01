@@ -187,61 +187,67 @@ Der Subgraph Algorithmus wurde in Python implementiert. Listing 1 zeigt die Bere
 
 \begin{lstlisting}[language=Python, caption=Signatur-Berechnung]
 def _compute_column_signature(self, matrix: np.ndarray) -> List[int]:
-	n = matrix.shape[0]
-	signatures = []
-	
-	for col in range(n):
-		column_vector = matrix[:, col]
-		
-		# Polynomiale Hash-Funktion
-		row_signature = sum(2**i for i in range(n) if column_vector[i] == 1)
-		
-		# Spaltenindex mit Gewichtung 2^n einbeziehen
-		col_weight = col * (2**n)
-		
-		signature = row_signature + col_weight
-		signatures.append(signature)
-	
-	return signatures
+        """
+        Berechnet fuer jeden Spaltenvektor eine eindeutige Signatur.
+        """
+        n = matrix.shape[0]
+        signatures = []
+        
+        for col in range(n):
+            column_vector = matrix[:, col]
+            
+            # Polynomiale Hash-Funktion: behandle Spalte als Binaerzahl
+            row_signature = sum(2**i for i in range(n) if column_vector[i] == 1)
+            
+            # Spaltenindex mit Gewichtung 2^n einbeziehen
+            col_weight = col * (2**n)
+            
+            signature = row_signature + col_weight
+            signatures.append(signature)
+        
+        return signatures
 \end{lstlisting}
 Listing 2 zeigt das Prüfen auf ein Matching für alle Rotationen.
 \begin{lstlisting}[language=Python, caption=Rotation-Match]
 def _find_signature_rotation_match(self, sig_A: List[int], sig_B: List[int]) -> bool:
-    n_A = len(sig_A)
-	n_B = len(sig_B)
-	
-	if n_A > n_B:
-		return False
-	
-	if n_A == 0:
-		return True
-	
-	# Extrahiere Zeilenkomponenten (ohne Spaltengewichtung)
-	# Fuer Matrix n x n ist col_weight = 2^n
-	col_weight_A = 2 ** n_A
-	col_weight_B = 2 ** n_B
-	
-	row_sigs_A = [sig % col_weight_A for sig in sig_A]
-	row_sigs_B = [sig % col_weight_B for sig in sig_B]
-	
-	# Pruefe alle n_B zyklischen Rotationen von B
-	for rotation in range(n_B):
-		# Rotiere row_sigs_B um 'rotation' Positionen nach rechts
-		rotated_B = row_sigs_B[rotation:] + row_sigs_B[:rotation]
-	
-		# Pruefe ob A in diesem Fenster der Rotation enthalten ist
-		if n_A == n_B:
-			# Gleich gross: direkter Vergleich
-			if self._compare_signature_sequences(row_sigs_A, rotated_B):
-				return True
-		else:
-			# A ist kleiner: Pruefe alle Startpositionen in rotated_B
-			for start in range(n_B - n_A + 1):
-				window = rotated_B[start:start + n_A]
-				if self._compare_signature_sequences(row_sigs_A, window):
-					return True
-	
-	return False
+        """
+        Sucht nach einer zyklischen Rotation der Spalten in B, sodass A enthalten ist.
+        """
+        n_A = len(sig_A)
+        n_B = len(sig_B)
+        
+        if n_A > n_B:
+            return False
+        
+        if n_A == 0:
+            return True
+        
+        # Extrahiere Zeilenkomponenten (ohne Spaltengewichtung)
+        # Fuer Matrix n x n ist col_weight = 2**n
+        col_weight_A = 2 ** n_A
+        col_weight_B = 2 ** n_B
+        
+        row_sigs_A = [sig % col_weight_A for sig in sig_A]
+        row_sigs_B = [sig % col_weight_B for sig in sig_B]
+        
+        # Pruefe alle n_B zyklischen Rotationen von B
+        for rotation in range(n_B):
+            # Rotiere row_sigs_B um 'rotation' Positionen nach rechts
+            rotated_B = row_sigs_B[rotation:] + row_sigs_B[:rotation]
+            
+            # Pruefe ob A in diesem Fenster der Rotation enthalten ist
+            if n_A == n_B:
+                # Gleich gross: direkter Vergleich
+                if self._compare_signature_sequences(row_sigs_A, rotated_B):
+                    return True
+            else:
+                # A ist kleiner: Pruefe alle Startpositionen in rotated_B
+                for start in range(n_B - n_A + 1):
+                    window = rotated_B[start:start + n_A]
+                    if self._compare_signature_sequences(row_sigs_A, window):
+                        return True
+        
+        return False
 \end{lstlisting}
 
 \section{Analyse}
