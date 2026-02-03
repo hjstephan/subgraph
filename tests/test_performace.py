@@ -5,7 +5,7 @@ Umfassende Tests mit maximaler Code Coverage
 
 import pytest
 import numpy as np
-from subgraph import Subgraph, create_example_graphs
+from src.subgraph import Subgraph, create_example_graphs
 
 class TestEdgeCases:
     """Tests für Randfälle und Fehlerbedingungen"""

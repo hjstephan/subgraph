@@ -1,5 +1,19 @@
-numpy>=1.21.0
-pytest>=7.0.0
-pytest-cov>=3.0.0
-matplotlib>=3.5.0  # Optional für Visualisierungen
-networkx>=2.6.0    # Optional für Graph-Utilities
+contourpy
+coverage
+cycler
+fonttools
+iniconfig
+kiwisolver
+matplotlib
+networkx
+numpy
+packaging
+pillow
+pluggy
+Pygments
+pyparsing
+pytest
+pytest-cov
+python-dateutil
+six
+-e git+ssh://git@github.com/hjstephan/subgraph.git
