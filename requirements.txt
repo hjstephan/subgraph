@@ -16,4 +16,4 @@ pytest
 pytest-cov
 python-dateutil
 six
--e git+ssh://git@github.com/hjstephan/subgraph.git
+-e git+ssh://git@github.com/hjstephan/subgraph.git@main#egg
